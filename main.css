@@ -1,9 +1,8 @@
 :root {
-    --lightback:;
     --darkback:rgb(10, 10, 10);
-    --light: #eee;
-    --darkblue: rgb(31, 58, 81);
-    --lively: rgb(255, 200, 97);
+    --font: #151810;
+    --button: rgba(255,255,100, 0.8);
+    --lively: #ffff00;
 
 }
 
@@ -11,7 +10,32 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: var(--font);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+main {
+    margin: 2rem 2rem;
+}
+.header {
+    padding: 1rem 6rem;
+    background: thistle;
+}
+button {
+    background: var(--button);
+}
+.lock-toggle {
+    background: var(--button);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2.6rem;
 }
 
