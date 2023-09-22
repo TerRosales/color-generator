@@ -1,0 +1,17 @@
+:root {
+    --lightback:;
+    --darkback:rgb(10, 10, 10);
+    --light: #eee;
+    --darkblue: rgb(31, 58, 81);
+    --lively: rgb(255, 200, 97);
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
