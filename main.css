@@ -3,6 +3,7 @@
     --font: #151810;
     --button: rgba(255,255,100, 0.8);
     --lively: #ffff00;
+    --light: rgba(255,255,250, 0.9);
 
 }
 
@@ -79,6 +80,7 @@ h4 {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
     justify-content: center;
+    max-width: 25rem;
 }
 
 .color-box {
@@ -89,7 +91,42 @@ h4 {
     background-color: var(--darkback);
     transition: 0.4 ease-out;
 }
+
+.color-box.copied {
+    border-color: red;
+}
+
+.lock-toggle {
+    background-color: var(--darkback);
+    opacity: 0.8;
+}
+
+.color-input {
+    text-align: center;
+    color:var(--light);
+    background-color: var(--darkback);
+}
+
+.lock-toggle.is-locked {
+    opacity: 1;
+}
+
 @media (max-width: 1024px) {
+    main{
+        margin: 1rem 1rem;
+    }
+    .color-box-container {
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .color-box {
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
     main{
         margin: 1rem 1rem;
     }
@@ -98,7 +135,7 @@ h4 {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 550px) {
     
     .color-box-container {
         grid-template-columns: repeat(1, 1fr)
