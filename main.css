@@ -1,5 +1,5 @@
 :root {
-    --darkback:rgb(10, 10, 10);
+    --darkback:rgba(6, 6, 6, 0.9);
     --font: #151810;
     --button: rgba(255,255,100, 0.8);
     --lively: #ffff00;
@@ -13,22 +13,40 @@
     color: var(--font);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
+/* initial set up */
 main {
     margin: 2rem 2rem;
 }
+
 .header {
     padding: 1rem 6rem;
-    background: thistle;
+    text-align: center;
 }
+
 .copy-hex, .project-yt-link, .generator-button {
     background: var(--darkback);
-    padding: 0.5rem;
+    padding: 0.7rem;
     color: white;
     border-color: white;
+    transition: all 0.1s ease-in;
 }
+
+.copy-hex:hover , .project-yt-link:hover , .generator-button:hover {
+    color: rgba(1, 1, 1, 0.9);
+    background: var(--lively);
+    padding: 0.6rem;
+}
+
+.project-yt-link {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.project-link-anchor:hover {
+    color:  rgba(1, 1, 1, 0.9);
+}
+
 .copy-hex {
-    padding: 0.5rem;
+    padding: 0.7rem;
 }
 
 
@@ -43,5 +61,47 @@ h1 {
     font-style: italic;
     font-weight: 700;
     font-size: 2.6rem;
+}
+
+h4 {
+    text-align: center;
+}
+/* initial setup ends */
+.header {
+    padding: 1rem 6rem;
+    background: thistle;
+}
+
+/* Grid Set up */
+.color-box-container {
+    padding: 5rem 2rem 5rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+}
+
+.color-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--lively);
+    background-color: var(--darkback);
+    transition: 0.4 ease-out;
+}
+@media (max-width: 1024px) {
+    main{
+        margin: 1rem 1rem;
+    }
+    .color-box-container {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width: 425px) {
+    
+    .color-box-container {
+        grid-template-columns: repeat(1, 1fr)
+    }
 }
 
